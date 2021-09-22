@@ -16,10 +16,17 @@ const AddTodo = ({ todos, setTodos }) => {
         title: "NO TODO ITEM ",
         status: "error",
         duration: 3000,
-        isClosable: true,
       });
 
       return;
+    }
+
+    if (todo) {
+      toast({
+        title: "TODO ADDED TO LIST",
+        status: "success",
+        duration: 3000,
+      });
     }
 
     const newTodo = {
